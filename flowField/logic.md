@@ -1,5 +1,5 @@
 #Flow Field
-Following tutorial by [The Coding Train}(https://youtu.be/BjoM9oKOAKY)
+Following tutorial by [The Coding Train](https://youtu.be/BjoM9oKOAKY)
 
 ## Logic
 ** Two parts: Create a vector (flow field) and make particles follow that flow field.**
