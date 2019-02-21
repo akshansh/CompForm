@@ -1,8 +1,8 @@
-#Flow Field
-Following tutorial by [The Coding Train}(https://youtu.be/BjoM9oKOAKY)
+# Flow Field
+Following tutorial by [The Coding Train](https://youtu.be/BjoM9oKOAKY)
 
 ## Logic
-** Two parts: Create a vector (flow field) and make particles follow that flow field.**
+**Two parts: Create a vector (flow field) and make particles follow that flow field.**
 * Identify every pixel from the canvas and create vectors from on the intersection.
 * Make the vectors move in different directions (z offset)
 * Create a constructor function for generating particles
