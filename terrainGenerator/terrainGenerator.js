@@ -17,7 +17,7 @@ var flying = 0;
 
 // CUSTOMIZE
 var terrainHeight_slider; // change terrain height
-var terrainColor;
+//var terrainColor;
 
 
 function setup() {
@@ -40,21 +40,26 @@ function setup() {
     createP('Change Altitude');
     terrainHeight_slider = createSlider(20, 300, 160, 20);
 
-
-
 }
 
 function draw() {
     background(177, 219, 237); // sky
+
+    // Treasure spot
+    fill(255, 0, 0);
+    push();
+    translate(-width, -height);
+    ellipse(width, height, 20, 20);
+    pop();
+
+    fill(151, 124, 83); // terrain background
     // noStroke();
     stroke(0); // terrain edges
     // noFill();
-    fill(151, 124, 83); // terrain background
     // terrainColor = map(noise(-terrainHeight_slider.value(), terrainHeight_slider.value()), 0, 1, 0, 255);
-    // fill(terrain[x][y]); // mapping
 
 
-    flying -= 0.2;
+    //flying -= 0.2;
 
     // Build the terrain
     var yOff = flying;
