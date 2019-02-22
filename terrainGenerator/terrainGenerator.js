@@ -1,4 +1,4 @@
-// TERRAIN GENERATOR
+// TREASURE MAP WITH TERRAIN GENERATOR
 // For logic and notes, view logic_notes.md file
 
 

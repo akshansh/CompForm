@@ -1,5 +1,5 @@
-# Terrain Generator using Perlin Noise
-## Processing and p5.js
+# Treasure Map with Terrain Generator
+## p5.js
 
 Following the tutorial by [The Coding Train on YouTube](https://youtu.be/IKB1hWWedMk)
 
@@ -16,6 +16,7 @@ Following the tutorial by [The Coding Train on YouTube](https://youtu.be/IKB1hWW
 * Move the terrain by adjusting the y offset
     * Create a variable that changes y offset value everytime
 * Add colors
+* Add a spot on the map to indicate the treasure location
 
 
 
