@@ -4,7 +4,6 @@
 // Coding Challenge
 // Create a caterpillar motion with sliders for change
 // Check the strategy.md file for details
-// GitHub link: 
 
 // draws a rectangle, where you tell it to!
 
