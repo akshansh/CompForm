@@ -4,7 +4,7 @@
 // require /turtles/turtle/turtle.js
 
 // For logic and updated tutle file, check GitHub
-// Link: 
+// Link: https://github.com/akshansh2593/CompForm/tree/master/turtleGraphicsCreator
 
 
 var myTurtle;
