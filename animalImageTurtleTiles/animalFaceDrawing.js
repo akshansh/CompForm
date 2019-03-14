@@ -1,7 +1,7 @@
 // Drawing animal face using Turtle Graphics
 
 // For notes, check logic.md
-// GitHub: 
+// GitHub: https://github.com/akshansh2593/CompForm/blob/master/animalImageTurtleTiles/logic.md
 
 var referenceImage;
 var myTurtle;
