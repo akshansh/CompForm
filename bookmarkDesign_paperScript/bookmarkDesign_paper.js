@@ -4,6 +4,14 @@
 // require https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.5/paper-full.min.js
 
 
+// Idea:
+// 1. Create an anchor shape
+// 2. Create a pattern using that shape
+// 3. Export the file in SVG and import in Illustrator
+// 4. Adjust the pattern on a bookmark sized artboard
+// 5. Laser cut the file to create bookmark designs
+
+
 ////////////////////////////////////
 // Creating the anchor for bookmark
 ////////////////////////////////////
@@ -13,6 +21,7 @@ innerCircle.strokeColor = 'blue';
 innerCircle.fillColor = 'yellow';
 var outerCircle = new Path.Circle(new Point(100, 35), 30);
 outerCircle.strokeColor = 'red'; // stroke of the anchor
+outerCircle.strokeWidth = 0.4;
 outerCircle.fillColor = 'white'; // color of the anchor
 
 var rectLocation1 = new Rectangle(new Point(10, 75), new Point(190, 95));
@@ -70,15 +79,38 @@ fullAnchor_punched.style = {
     // shadowOffset: new Point(5, 5),
 };
 
-var anchorSymbol = new Symbol(fullAnchor_punched);
-// Place 1000 instances of the symbol in the project in random
-// positions in the view:
+
+///////////////////////////////////////////
+// Creating the pattern using Anchor Shape
+///////////////////////////////////////////
+// SYMBOL doesn't work with ExportSVG
+// var anchorSymbol = new Symbol(fullAnchor_punched);
+// // Place 1000 instances of the symbol in the project in random
+// // positions in the view:
+// for (var i = 0; i < 1000; i++) {
+//     var position = view.size * Point.random();
+//     var placed = anchorSymbol.place(position - i * 0.5);
+//     placed.scale(i * 0.0010);
+//     placed.rotate(i);
+// }
+
+
+// Using group instead of symbols
+var group = new Group({
+    children: [fullAnchor_punched],
+    // Move the group to the center of the view:
+    position: view.center
+});
+
+// Make 1000 copies of the anchor:
 for (var i = 0; i < 1000; i++) {
-    var position = view.size * Point.random();
-    var placed = anchorSymbol.place(position - i * 0.5);
-    placed.scale(i * 0.0010);
-    placed.rotate(i);
+    var copy = group.clone();
+    // Distribute the copies horizontally, so we can see them:
+    copy.position = view.size * Point.random() - i * 0.5;
+    copy.scale(i * 0.001);
+    copy.rotate(i);
 }
+
 
 
 //////////////////////////
@@ -106,6 +138,8 @@ function downloadAsSVG(fileName) {
     link.href = url;
     link.click();
 }
+
+// Other trials with exporting as SVG: didn't work
 
 // document.body.appendChild(project.exportSVG());
 // console.log('Export SVG', Date.now() - start);
