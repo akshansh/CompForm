@@ -1,4 +1,4 @@
-# Fast Fourier Transform Visualization
+# Discrete Fourier Transform Visualization
 
 [Reference 1](https://en.wikipedia.org/wiki/Fourier_series)
 [Reference 2](https://youtu.be/Mm2eYfj0SgA)
